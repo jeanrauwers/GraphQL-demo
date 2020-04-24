@@ -2,7 +2,6 @@ import { resolvers } from './resolvers';
 import { makeExecutableSchema } from 'graphql-tools';
 
 const typeDefs = `
-
     type Friend {
         id: ID
         firstName: String

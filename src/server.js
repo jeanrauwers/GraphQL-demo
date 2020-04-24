@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 
 import graphqlHTTP from 'express-graphql';
-import { schema } from './schema'
+import { schema } from './models/graph-schema'
 
 const app = express();
 const port = 9000;
@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 try {
+    console.log(process.env.MONGO_DB_SECRET)
     mongoose.connect(
         process.env.MONGO_DB_SECRET,
         {
